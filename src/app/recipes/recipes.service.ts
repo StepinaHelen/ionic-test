@@ -51,6 +51,8 @@ export class RecipesService {
   }
 
   deleteRecipe(id: string): Recipe[] {
-    return this.recipes.filter((el) => el.id !== id);
+    this.recipes = this.recipes.filter((el) => el.id !== id);
+
+    return this.recipes;
   }
 }

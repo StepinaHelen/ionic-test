@@ -40,6 +40,7 @@ export class RecipeDetailPage implements OnInit {
             text: 'Delete',
             handler: () => {
               this.recipesService.deleteRecipe(this.recipeId);
+              console.log(this.recipeId, this.recipesService.getAllRcipes());
               this.router.navigate(['recipes']);
             },
           },
